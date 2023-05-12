@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Code Minify and Beautify</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<textarea id="input" placeholder="MINIFY INPUT / MAXIFY OUTPUT"></textarea>
+<div>
+  <button>Minify HTML</button>
+  <button>Minify CSS</button>
+  <button>Minify JS</button>
+  <button>Clear All</button>
+
+</div>
+<textarea id="output" placeholder="MINIFY OUTPUT / MAXIFY INPUT"></textarea>
+<p></p>
+  <script  src="function.js"></script>
+  <script>
+    var buttons = _('button');
+    for(var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener('click', function() {
+        minify_maxify(
+          this.innerHTML, $('input'),
+          $('output')
+        );
+      }, false);
+    }
+  </script>
+</body>
+</html>
